@@ -28,6 +28,10 @@ const categories = [
 export default function CategorySection() {
   return (
     <section className="py-16 bg-white">
+      <div className="text-center mb-10">
+        <span className="text-[#00B4D8] font-bold uppercase tracking-widest text-sm">Explore</span>
+        <h2 className="text-[30px] font-black text-[#0A2342] mt-2">Our Categories</h2>
+      </div>
       <div className="w-full px-4 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {categories.map((cat, i) => (

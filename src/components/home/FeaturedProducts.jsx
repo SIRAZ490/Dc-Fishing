@@ -94,7 +94,7 @@ export default function FeaturedProducts() {
         {/* Header */}
         <div className="text-center mb-3">
           <span className="text-[#00B4D8] font-bold uppercase tracking-widest text-sm">Hand-Picked</span>
-          <h2 className="text-[30px] font-black text-[#0A2342] mt-2">Bestseller Products</h2>
+          <h2 className="text-[30px] font-black text-[#0A2342] mt-2">Our Products</h2>
           <p className="text-gray-400 mt-2 text-[14px]">Top-rated gear chosen by our fishing and diving experts</p>
         </div>
 
