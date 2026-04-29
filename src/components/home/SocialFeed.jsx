@@ -66,7 +66,7 @@ const whatsappUrl = 'https://wa.me/15551234567?text=Hi!%20I%20am%20interested%20
 export default function SocialFeed() {
   return (
     <section className="py-20 bg-[#F8F5F0]">
-      <div className="max-w-7xl mx-auto px-4">
+      <div style={{ padding: '0 clamp(24px, 6vw, 96px)' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

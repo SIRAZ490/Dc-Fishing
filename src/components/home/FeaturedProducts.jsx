@@ -88,7 +88,7 @@ export default function FeaturedProducts() {
   const displayed = products.filter(tabs[activeTab].filter);
 
   return (
-    <section className="py-20 pb-28 bg-white border-t border-gray-100">
+    <section className="py-20 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto" style={{ padding: '0 clamp(24px, 6vw, 96px)' }}>
 
         {/* Header */}

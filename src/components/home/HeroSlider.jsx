@@ -199,13 +199,6 @@ export default function HeroSlider() {
         {String(slides.length).padStart(2, '0')}
       </div>
 
-      {/* Bottom diagonal divider */}
-      <div className="absolute bottom-0 left-0 w-full z-10 pointer-events-none overflow-hidden leading-none">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="w-full" style={{ height: 80, display: 'block' }}>
-          <polygon points="0,80 1440,0 1440,80" fill="white" />
-        </svg>
-      </div>
-
       {/* Scroll arrow */}
       <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-20 animate-bounce text-white/50 hidden md:block">
         <ChevronDown size={26} />

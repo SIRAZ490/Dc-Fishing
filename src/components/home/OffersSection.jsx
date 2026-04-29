@@ -13,7 +13,7 @@ export default function OffersSection() {
   const addItem = useCartStore((st) => st.addItem);
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto" style={{ padding: '0 clamp(24px, 6vw, 96px)' }}>
 
         {/* Header */}

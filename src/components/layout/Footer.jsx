@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Zap } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { FaFacebook, FaInstagram, FaYoutube, FaTiktok, FaWhatsapp } from 'react-icons/fa';
-import { useState } from 'react';
 
 const quickLinks = [
   { label: 'Home',        path: '/' },
@@ -31,47 +30,10 @@ const socials = [
 ];
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (email) { setSubscribed(true); setEmail(''); }
-  };
-
   return (
     <footer className="bg-[#0A2342] text-gray-400">
-
-      {/* Newsletter */}
-      <div className="bg-[#FF6B35]">
-        <div className="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <div className="flex items-center gap-2 mb-1">
-              <Zap size={18} className="text-white fill-white" />
-              <h3 className="text-white font-black text-xl">Get Exclusive Deals</h3>
-            </div>
-            <p className="text-white/80 text-sm">Subscribe and get 10% off your first order!</p>
-          </div>
-          {subscribed ? (
-            <p className="text-white font-bold text-lg">🎉 Thanks for subscribing!</p>
-          ) : (
-            <form onSubmit={handleSubscribe} className="flex w-full max-w-md">
-              <input
-                type="email" value={email} required
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                className="flex-1 px-5 py-3 rounded-l-full outline-none text-gray-800 text-sm"
-              />
-              <button type="submit" className="bg-[#0A2342] text-white px-6 py-3 rounded-r-full font-bold text-sm hover:bg-[#0d2d52] transition-colors whitespace-nowrap">
-                Subscribe
-              </button>
-            </form>
-          )}
-        </div>
-      </div>
-
       {/* Main grid */}
-      <div className="max-w-7xl mx-auto px-4 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-4 py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
         {/* Brand info */}
         <div>
@@ -148,7 +110,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10 py-5 px-4">
+      <div className="border-t border-white/10 py-8 px-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
           <p>© {new Date().getFullYear()} DC Fishing Store. All rights reserved.</p>
           <div className="flex gap-5">
