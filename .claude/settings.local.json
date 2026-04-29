@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(netstat -an)",
+      "PowerShell(curl http://localhost:5173 -UseBasicParsing -TimeoutSec 3 2>&1)"
+    ]
+  }
+}

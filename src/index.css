@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --ocean-dark: #0A2342;
+  --aqua: #00B4D8;
+  --coral: #FF6B35;
+  --sand: #F8F5F0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #fff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Swiper custom styles */
+.swiper-pagination-bullet-active {
+  background: var(--aqua) !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--aqua) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A2342;
+}
+::-webkit-scrollbar-thumb {
+  background: #00B4D8;
+  border-radius: 3px;
+}
