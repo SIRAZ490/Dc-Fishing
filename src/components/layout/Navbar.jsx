@@ -112,7 +112,7 @@ export default function Navbar() {
               <li key={item.label}>
                 <Link
                   to={item.path}
-                  className="flex items-center h-14 px-4 text-[15px] font-bold uppercase tracking-wider text-[#1a1a1a] border-b-2 border-transparent hover:text-[#0A2342] hover:border-[#0A2342] transition-colors"
+                  className="flex items-center h-14 px-4 text-[15px] font-bold uppercase tracking-wider text-[#1a1a1a] hover:text-[#FF6B35] transition-colors"
                 >
                   {item.label}
                 </Link>
