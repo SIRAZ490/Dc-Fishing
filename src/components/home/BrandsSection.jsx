@@ -6,8 +6,8 @@ import 'swiper/css';
 
 export default function BrandsSection() {
   return (
-    <section className="py-16 bg-white border-t border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-20 bg-white border-t border-b border-gray-100">
+      <div style={{ padding: '0 clamp(24px, 6vw, 96px)' }}>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

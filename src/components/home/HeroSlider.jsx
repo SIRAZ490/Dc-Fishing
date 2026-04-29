@@ -117,7 +117,8 @@ export default function HeroSlider() {
                         className="mb-4"
                       >
                         <span
-                          className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[4px] px-4 py-1.5 rounded-full border"
+                          className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[4px] rounded-full border"
+                          style={{ padding: '12px 36px' }}
                           style={{ color: slide.accent, borderColor: slide.accent, backgroundColor: `${slide.accent}15` }}
                         >
                           <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: slide.accent }} />
@@ -161,14 +162,15 @@ export default function HeroSlider() {
                       >
                         <Link
                           to={slide.ctaLink}
-                          className="flex items-center gap-2 text-white font-bold py-3.5 px-8 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl text-sm"
-                          style={{ backgroundColor: slide.accent }}
+                          className="flex items-center gap-3 text-white font-bold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl text-sm"
+                          style={{ backgroundColor: slide.accent, padding: '12px 36px' }}
                         >
                           {slide.cta} <ArrowRight size={16} />
                         </Link>
                         <Link
                           to={slide.ctaSecondaryLink}
-                          className="flex items-center gap-2 text-white font-semibold py-3.5 px-8 rounded-full border border-white/40 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-sm"
+                          className="flex items-center gap-3 text-white font-semibold rounded-full border border-white/40 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-sm"
+                          style={{ padding: '10px 24px' }}
                         >
                           {slide.ctaSecondary}
                         </Link>
@@ -204,8 +206,9 @@ export default function HeroSlider() {
 
       <style>{`
         @keyframes kenBurns {
-          from { transform: scale(1.0); }
-          to   { transform: scale(1.08); }
+          0%   { transform: scale(1.08); }
+          40%  { transform: scale(1.0);  }
+          100% { transform: scale(1.1);  }
         }
         .swiper-pagination {
           bottom: 28px !important;

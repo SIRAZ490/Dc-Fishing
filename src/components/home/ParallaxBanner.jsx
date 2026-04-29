@@ -9,7 +9,7 @@ export default function ParallaxBanner() {
   const y = useTransform(scrollYProgress, [0, 1], ['-20%', '20%']);
 
   return (
-    <section ref={ref} className="relative h-[500px] overflow-hidden">
+    <section ref={ref} className="relative py-20 min-h-[500px]">
       <motion.div
         style={{ y }}
         className="absolute inset-0 bg-cover bg-center"
@@ -19,7 +19,7 @@ export default function ParallaxBanner() {
         }}
       />
       <div className="absolute inset-0 bg-[#0A2342]/70" />
-      <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
+      <div className="relative z-10 h-full flex items-center justify-center text-center" style={{ paddingLeft: 'clamp(24px, 6vw, 96px)', paddingRight: 'clamp(24px, 6vw, 96px)' }}>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}

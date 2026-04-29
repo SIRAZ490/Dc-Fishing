@@ -5,7 +5,7 @@ import FeaturedProducts from '../components/home/FeaturedProducts';
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="flex flex-col gap-6">
       <HeroSlider />
       <CategorySection />
       <OffersSection />
