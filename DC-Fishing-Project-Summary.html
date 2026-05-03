@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Calibri, Arial, sans-serif;
+      font-size: 12pt;
+      margin: 72px;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 26pt;
+      color: #0A2342;
+      border-bottom: 3px solid #FF6B35;
+      padding-bottom: 8px;
+      margin-bottom: 6px;
+    }
+    h2 {
+      font-size: 16pt;
+      color: #0A2342;
+      margin-top: 32px;
+      margin-bottom: 8px;
+      border-left: 4px solid #FF6B35;
+      padding-left: 10px;
+    }
+    h3 {
+      font-size: 13pt;
+      color: #FF6B35;
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+    p {
+      margin: 6px 0 10px 0;
+    }
+    code {
+      background-color: #f4f4f4;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-family: Consolas, monospace;
+      font-size: 10.5pt;
+      color: #c0392b;
+    }
+    pre {
+      background-color: #f4f4f4;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 14px 18px;
+      font-family: Consolas, monospace;
+      font-size: 10pt;
+      color: #333;
+      margin: 12px 0;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 14px 0;
+    }
+    th {
+      background-color: #0A2342;
+      color: white;
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 11pt;
+    }
+    td {
+      padding: 8px 14px;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 11pt;
+    }
+    tr:nth-child(even) td {
+      background-color: #f9f9f9;
+    }
+    .badge {
+      display: inline-block;
+      background-color: #0A2342;
+      color: white;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 10pt;
+      font-weight: bold;
+      margin-right: 4px;
+    }
+    .step-box {
+      background-color: #f0f6ff;
+      border-left: 4px solid #0A2342;
+      padding: 12px 16px;
+      margin: 12px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .note {
+      background-color: #fff8f5;
+      border-left: 4px solid #FF6B35;
+      padding: 10px 16px;
+      margin: 12px 0;
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+    }
+    ul {
+      margin: 6px 0;
+      padding-left: 22px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .subtitle {
+      color: #666;
+      font-size: 13pt;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DC Fishing Store</h1>
+  <p class="subtitle">Full Project Documentation — Built with React + Vite + Tailwind CSS</p>
+
+  <!-- ───────────────────────────── -->
+  <h2>What is This Project?</h2>
+  <p>
+    DC Fishing is a <strong>professional e-commerce website</strong> for a fishing and diving gear store based in Lebanon.
+    It is a front-end only project, meaning there is no real server or database — all product data is stored
+    locally in a JavaScript file.
+  </p>
+  <p>
+    The website includes a homepage, shop page with filters, product detail pages, a contact page, and an about us page.
+  </p>
+
+  <!-- ───────────────────────────── -->
+  <h2>Tech Stack — Tools Used</h2>
+  <table>
+    <tr>
+      <th>Tool</th>
+      <th>What It Does</th>
+    </tr>
+    <tr><td><strong>React</strong></td><td>JavaScript library for building the user interface (buttons, pages, components)</td></tr>
+    <tr><td><strong>Vite</strong></td><td>Fast development server — runs your project locally and builds it for production</td></tr>
+    <tr><td><strong>Tailwind CSS</strong></td><td>CSS framework — you style elements by adding class names directly in HTML/JSX</td></tr>
+    <tr><td><strong>Framer Motion</strong></td><td>Animation library — smooth fade-in, slide-up, and scroll animations</td></tr>
+    <tr><td><strong>Swiper</strong></td><td>Powers the hero image slider on the homepage</td></tr>
+    <tr><td><strong>Zustand</strong></td><td>State management — handles the shopping cart across all pages</td></tr>
+    <tr><td><strong>React Router</strong></td><td>Handles navigation between pages (Home → Shop → Contact, etc.)</td></tr>
+    <tr><td><strong>Lucide React</strong></td><td>Icon library — phone, cart, search, star icons, etc.</td></tr>
+    <tr><td><strong>React Icons</strong></td><td>More icons — Facebook, Instagram, WhatsApp, TikTok, YouTube</td></tr>
+    <tr><td><strong>React Helmet Async</strong></td><td>Manages the page title and meta tags in the browser tab</td></tr>
+  </table>
+
+  <!-- ───────────────────────────── -->
+  <h2>Step-by-Step Project Setup</h2>
+
+  <h3>Step 1 — Create the Project</h3>
+  <div class="step-box">
+    <p>Run this command in your terminal to create a new React project using Vite:</p>
+    <pre>npm create vite@latest "dc-fishing" -- --template react</pre>
+    <p>This creates a folder called <code>dc-fishing</code> with all the basic React files already set up.</p>
+  </div>
+
+  <h3>Step 2 — Install Base Dependencies</h3>
+  <div class="step-box">
+    <pre>cd dc-fishing
+npm install</pre>
+    <p>This downloads all the default packages that Vite + React need to run.</p>
+  </div>
+
+  <h3>Step 3 — Install All Project Libraries</h3>
+  <div class="step-box">
+    <pre>npm install tailwindcss @tailwindcss/vite framer-motion swiper zustand react-router-dom lucide-react react-icons react-helmet-async</pre>
+    <p>This installs every library the project uses — animations, icons, routing, cart state, slider, and styling.</p>
+  </div>
+
+  <h3>Step 4 — Configure Tailwind CSS</h3>
+  <div class="step-box">
+    <p>Edit the file <code>vite.config.js</code> to add the Tailwind plugin:</p>
+    <pre>import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+})</pre>
+  </div>
+
+  <h3>Step 5 — Build the Folder Structure</h3>
+  <div class="step-box">
+    <pre>src/
+├── assets/images/       ← Local images saved here
+├── components/
+│   ├── layout/          ← Navbar, Footer, CartDrawer, AnnouncementBar, ScrollToTop
+│   └── home/            ← HeroSlider, CategorySection, FeaturedProducts,
+│                           BrandsSection, OffersSection, TestimonialsSection
+├── data/
+│   └── products.js      ← All product data (name, price, image, category, brand...)
+├── pages/               ← HomePage, ShopPage, ProductPage, ContactPage, AboutPage
+└── store/
+    └── cartStore.js     ← Shopping cart logic (add, remove, update quantity)</pre>
+  </div>
+
+  <h3>Step 6 — Create Product Data</h3>
+  <div class="step-box">
+    <p>
+      All products are defined in <code>src/data/products.js</code> as a JavaScript array.
+      Each product has: <code>id</code>, <code>name</code>, <code>brand</code>, <code>price</code>,
+      <code>oldPrice</code>, <code>image</code>, <code>category</code>, <code>rating</code>, <code>reviews</code>.
+    </p>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <h2>Pages Built</h2>
+
+  <h3>1. HomePage</h3>
+  <ul>
+    <li>Hero Slider — 3 auto-sliding images (Spearfishing, Fishing, Freediving) with Ken Burns zoom effect</li>
+    <li>Category Section — 3 clickable image cards (Fishing, Spearfishing, Diving)</li>
+    <li>Featured Products — grid of top products with Add to Cart</li>
+    <li>Brands Section — logos of carried brands</li>
+    <li>Offers Section — promotional banners</li>
+    <li>Testimonials Section — customer reviews</li>
+  </ul>
+
+  <h3>2. ShopPage</h3>
+  <ul>
+    <li>Full product grid — 12 products per page with pagination</li>
+    <li>Filter sidebar with: Category, Price Range (slider), Brand (checkboxes), Min Rating</li>
+    <li>Sort by: Default, Price Low→High, Price High→Low, Top Rated, Name A–Z</li>
+    <li>Search tag display with clear option</li>
+    <li>Clear all filters button</li>
+  </ul>
+
+  <h3>3. ProductPage</h3>
+  <ul>
+    <li>Single product detail view</li>
+    <li>Image, name, brand, price, rating, description</li>
+    <li>Add to Cart button with quantity selector</li>
+  </ul>
+
+  <h3>4. ContactPage</h3>
+  <ul>
+    <li>Hero section with background image and overlay</li>
+    <li>Contact form — Name, Email, Subject, Message fields with Send button</li>
+    <li>Contact info cards — Call Us, Email Us, Visit Us (links to Google Maps), Working Hours</li>
+    <li>WhatsApp instant chat button</li>
+    <li>Social media links — Facebook, Instagram, YouTube, TikTok</li>
+    <li>Google Maps embed showing store location</li>
+  </ul>
+
+  <h3>5. AboutPage</h3>
+  <ul>
+    <li>Hero image with dark overlay and animated title</li>
+    <li>Who We Are — company story text</li>
+    <li>Stats — 10,000+ customers, 500+ products, 15+ brands, 48h delivery</li>
+    <li>Our Values — Premium Quality, Passion First, Expert Support cards</li>
+    <li>Ready to Gear Up — CTA with Shop Now and Contact Us buttons</li>
+  </ul>
+
+  <!-- ───────────────────────────── -->
+  <h2>Layout Components</h2>
+
+  <h3>Navbar</h3>
+  <ul>
+    <li>Logo, navigation links, search bar, user icon, cart icon with item count badge</li>
+    <li>Announcement bar at the top (free shipping message)</li>
+    <li>Responsive — collapses to mobile menu on small screens</li>
+  </ul>
+
+  <h3>CartDrawer</h3>
+  <ul>
+    <li>Slides in from the right when cart icon is clicked</li>
+    <li>Shows all cart items, quantities, prices, and total</li>
+    <li>Add / remove items, clear cart</li>
+  </ul>
+
+  <h3>Footer</h3>
+  <ul>
+    <li>Company info, quick links, category links, contact info, newsletter signup</li>
+    <li>Social media icons</li>
+    <li>Store hours</li>
+  </ul>
+
+  <!-- ───────────────────────────── -->
+  <h2>Key Features</h2>
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>How It Works</th>
+    </tr>
+    <tr><td><strong>Shopping Cart</strong></td><td>Zustand store — persists cart items across all pages without a database</td></tr>
+    <tr><td><strong>Product Search</strong></td><td>Filters products by name or brand in real time from the navbar search</td></tr>
+    <tr><td><strong>Product Filters</strong></td><td>Category, price, brand, and rating filters combined using useMemo for performance</td></tr>
+    <tr><td><strong>Responsive Design</strong></td><td>Tailwind CSS breakpoints — works on mobile (sm), tablet (md), and desktop (lg/xl)</td></tr>
+    <tr><td><strong>Local Images</strong></td><td>Hero and category images downloaded from Unsplash and saved in src/assets/images/</td></tr>
+    <tr><td><strong>Animations</strong></td><td>Framer Motion — fade/slide on page load and scroll-triggered animations</td></tr>
+    <tr><td><strong>Google Maps</strong></td><td>Embedded iframe in Contact page showing store location in Dbayeh, Lebanon</td></tr>
+  </table>
+
+  <!-- ───────────────────────────── -->
+  <h2>How to Run the Project</h2>
+  <div class="step-box">
+    <pre>cd dc-fishing
+npm install        ← install all dependencies (only needed once)
+npm run dev        ← start the development server</pre>
+    <p>Then open your browser and go to: <code>http://localhost:5173</code></p>
+  </div>
+
+  <div class="note">
+    <strong>Note:</strong> This is a front-end only project. There is no real payment system, login system, or database.
+    All data is stored in JavaScript files inside the <code>src/data/</code> folder.
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <h2>Local Images Saved</h2>
+  <table>
+    <tr>
+      <th>File Name</th>
+      <th>Used In</th>
+    </tr>
+    <tr><td>hero-spearfishing.jpg</td><td>HeroSlider — Slide 1</td></tr>
+    <tr><td>hero-fishing.jpg</td><td>HeroSlider — Slide 2</td></tr>
+    <tr><td>hero-freediving.jpg</td><td>HeroSlider — Slide 3</td></tr>
+    <tr><td>cat-fishing.jpg</td><td>CategorySection — Fishing</td></tr>
+    <tr><td>cat-spearfishing.jpg</td><td>CategorySection — Spearfishing</td></tr>
+    <tr><td>cat-diving.jpg</td><td>CategorySection — Diving</td></tr>
+    <tr><td>about_us.avif</td><td>AboutPage — Hero background</td></tr>
+    <tr><td>pull.avif</td><td>ContactPage — Hero background</td></tr>
+  </table>
+
+</body>
+</html>

@@ -41,7 +41,7 @@ export default function Navbar() {
 
       {/* ── TOP BAR: logo | search | icons ── */}
       <div className="border-b border-gray-100">
-        <div className="w-full h-[84px] grid grid-cols-[1fr_auto_1fr] items-center px-6">
+        <div className="relative w-full h-[84px] flex items-center justify-between px-6">
 
           {/* LEFT: logo */}
           <div className="flex items-center gap-3">
@@ -57,8 +57,8 @@ export default function Navbar() {
             </button>
 
             <Link to="/" className="flex items-center gap-2 shrink-0" style={{ paddingLeft: 'clamp(0px, 4vw, 60px)' }}>
-              <img src={logoImg} alt="DC Fishing" className="h-14 w-auto object-contain" />
-              <span className="text-[#0A2342] text-[26px] font-black leading-tight tracking-tight hidden sm:block" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+              <img src={logoImg} alt="DC Fishing" className="h-10 sm:h-14 w-auto object-contain" />
+              <span className="text-[#0A2342] text-[18px] sm:text-[26px] font-black leading-tight tracking-tight" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 DC <span className="text-[#FF6B35]">Fishing</span>
               </span>
             </Link>
@@ -67,9 +67,10 @@ export default function Navbar() {
           {/* CENTER: search */}
           <form
             onSubmit={handleSearch}
-            className="hidden lg:flex items-center relative bg-gray-100 rounded-full overflow-hidden hover:bg-gray-200 transition-colors"
+            className="hidden lg:grid grid-cols-[44px_1fr_44px] items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-100 rounded-full overflow-hidden hover:bg-gray-200 transition-colors"
             style={{ height: 44, width: 'clamp(260px, 38vw, 620px)' }}
           >
+            <span aria-hidden="true" />
             <input
               type="search"
               value={searchQuery}
@@ -77,7 +78,7 @@ export default function Navbar() {
               placeholder="What are you looking for?"
               className="w-full h-full px-5 text-[13px] outline-none text-gray-700 placeholder-gray-400 bg-transparent text-center"
             />
-            <button type="submit" className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#0A2342] transition-colors">
+            <button type="submit" className="h-full w-11 flex items-center justify-center text-gray-400 hover:text-[#0A2342] transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="none">
                 <path d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M16.4434 16.4453L20.9997 21.0016" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -86,7 +87,7 @@ export default function Navbar() {
           </form>
 
           {/* RIGHT: login + cart */}
-          <div className="flex items-center gap-5 justify-end" style={{ paddingRight: 'clamp(0px, 4vw, 60px)' }}>
+          <div className="flex items-center gap-3 sm:gap-5 justify-end" style={{ paddingRight: 'clamp(8px, 4vw, 60px)' }}>
             <Link to="/account" className="flex items-center gap-2 text-[#1a1a1a] hover:text-[#00B4D8] transition-colors">
               <User size={22} strokeWidth={1.5} />
               <span className="hidden xl:block text-[14px] font-medium whitespace-nowrap">Login / Register</span>

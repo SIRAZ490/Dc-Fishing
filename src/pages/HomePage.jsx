@@ -1,7 +1,9 @@
-import HeroSlider from '../components/home/HeroSlider';
-import CategorySection from '../components/home/CategorySection';
-import OffersSection from '../components/home/OffersSection';
-import FeaturedProducts from '../components/home/FeaturedProducts';
+import HeroSlider from "../components/home/HeroSlider";
+import CategorySection from "../components/home/CategorySection";
+import OffersSection from "../components/home/OffersSection";
+import BrandsSection from "../components/home/BrandsSection";
+import FeaturedProducts from "../components/home/FeaturedProducts";
+import TestimonialsSection from "../components/home/TestimonialsSection";
 
 export default function HomePage() {
   return (
@@ -9,7 +11,9 @@ export default function HomePage() {
       <HeroSlider />
       <CategorySection />
       <OffersSection />
+      <BrandsSection />
       <FeaturedProducts />
+      <TestimonialsSection />
     </main>
   );
 }

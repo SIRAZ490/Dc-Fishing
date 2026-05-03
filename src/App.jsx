@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AnnouncementBar from './components/layout/AnnouncementBar';
+import ScrollToTop from './components/layout/ScrollToTop';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import CartDrawer from './components/layout/CartDrawer';
@@ -10,7 +11,6 @@ import ShopPage from './pages/ShopPage';
 import ProductPage from './pages/ProductPage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
-import SalePage from './pages/SalePage';
 import VisitUsPage from './pages/VisitUsPage';
 import BrandsPage from './pages/BrandsPage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -18,6 +18,7 @@ import NotFoundPage from './pages/NotFoundPage';
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AnnouncementBar />
       <Navbar />
       <CartDrawer />
@@ -27,7 +28,6 @@ export default function App() {
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/contact"     element={<ContactPage />} />
         <Route path="/about"       element={<AboutPage />} />
-        <Route path="/sale"        element={<SalePage />} />
         <Route path="/visit"       element={<VisitUsPage />} />
         <Route path="/brands"      element={<BrandsPage />} />
         <Route path="/blog"        element={<ShopPage />} />

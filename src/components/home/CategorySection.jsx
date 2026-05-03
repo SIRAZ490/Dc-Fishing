@@ -6,21 +6,21 @@ const categories = [
     slug: 'fishing',
     subtitle: 'Rods, Reels & Tackle',
     title: 'Fishing',
-    image: 'https://images.unsplash.com/photo-1607524191306-7fec3d6b44b6?w=900&h=520&fit=crop',
+    image: '/src/assets/images/fishing category.jpg',
     path: '/shop?cat=fishing-rods',
   },
   {
     slug: 'spearfishing',
     subtitle: 'Spearguns & Gear',
     title: 'Spearfishing',
-    image: 'https://images.unsplash.com/photo-1674419365574-70eaaed5d4e1?w=900&h=520&fit=crop',
+    image: '/src/assets/images/cat-spearfishing.jpg',
     path: '/shop?cat=spearfishing',
   },
   {
     slug: 'diving',
     subtitle: 'Apnea & Freediving',
     title: 'Diving',
-    image: 'https://images.unsplash.com/photo-1462947760324-15811216b688?w=900&h=520&fit=crop',
+    image: '/src/assets/images/cat-diving.jpg',
     path: '/shop?cat=diving-masks',
   },
 ];
@@ -31,7 +31,7 @@ export default function CategorySection() {
       <div style={{ padding: '0 clamp(24px, 6vw, 96px)' }}>
         <div className="text-center mb-10">
           <span className="text-[#00B4D8] font-bold uppercase tracking-widest text-sm">Explore</span>
-          <h2 className="text-[30px] font-black text-[#0A2342] mt-2">Our Categories</h2>
+          <h2 className="text-[28px] sm:text-[38px] font-black text-[#FF6B35] mt-2">Our Categories</h2>
         </div>
         <div className="w-full">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -43,7 +43,7 @@ export default function CategorySection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="relative overflow-hidden rounded-xl group cursor-pointer"
-              style={{ height: 480 }}
+              style={{ height: 'clamp(280px, 40vw, 480px)' }}
             >
               {/* Image */}
               <img
